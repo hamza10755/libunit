@@ -1,6 +1,6 @@
 #include "../include/libunit.h"
 
-void main_launcher(t_unit_test *list)
+void main_launcher(t_unit_test *list, char **(*f)(const char *, char))
 {
     pid_t pid;
     int status;
@@ -8,9 +8,10 @@ void main_launcher(t_unit_test *list)
     while (list) {
         pid = fork();
         if (pid == 0)
-            exit(list->f());
+            exit(list->f(f));
         else {
             wait(&status);
+            // write thr test fun : teat name : status 
             if (WIFSIGNALED(status)) {
                 signal_num = WTERMSIG(status);
                 if (signal_num == SIGSEGV)
