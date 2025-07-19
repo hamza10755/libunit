@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   printf_functions2.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hbelaih <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: hbelaih <hbelaih@student.42.amman>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/01 12:35:21 by hbelaih           #+#    #+#             */
-/*   Updated: 2025/01/01 12:37:03 by hbelaih          ###   ########.fr       */
+/*   Updated: 2025/07/19 17:36:53 by hbelaih          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/so_long.h"
+#include "libft.h"
 
 static int	hex_len(unsigned long n)
 {
@@ -39,7 +39,7 @@ static void	print_hex(unsigned long num)
 
 int	print_pointer(unsigned long l)
 {
-	int				len;
+	int	len;
 
 	len = 0;
 	if (l == 0)

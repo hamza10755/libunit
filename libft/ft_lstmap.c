@@ -9,9 +9,9 @@
 /*   Updated: 2024/09/09 14:36:00 by hbelaih          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include	"libft.h"
+#include "libft.h"
 
-t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del) (void *))
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*h;
 	t_list	*temp;

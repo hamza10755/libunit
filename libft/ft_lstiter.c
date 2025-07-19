@@ -9,7 +9,7 @@
 /*   Updated: 2024/09/09 12:52:48 by hbelaih          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include	"libft.h"
+#include "libft.h"
 
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {

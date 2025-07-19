@@ -6,7 +6,7 @@
 /*   By: hbelaih <hbelaih@student.42.amman>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/19 12:22:27 by hbelaih           #+#    #+#             */
-/*   Updated: 2025/07/19 13:00:35 by hbelaih          ###   ########.fr       */
+/*   Updated: 2025/07/19 17:53:04 by hbelaih          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,6 @@ void	free_list(t_unit_test *list)
 	}
 }
 
-// int (*f)(void)
 void	load_test(t_unit_test **test_list, const char *test_name,
 		const char *test_fun, int (*f)(char **(*f)(const char *, char)))
 {

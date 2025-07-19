@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yaman-alrifai <yaman-alrifai@student.42    +#+  +:+       +#+        */
+/*   By: hbelaih <hbelaih@student.42.amman>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/26 15:06:41 by hbelaih           #+#    #+#             */
-/*   Updated: 2025/07/19 10:16:23 by yaman-alrif      ###   ########.fr       */
+/*   Updated: 2025/07/19 17:43:49 by hbelaih          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,5 +75,10 @@ void				ft_lstclear(t_list **lst, void (*del)(void *));
 void				ft_lstiter(t_list *lst, void (*f)(void *));
 t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),
 						void (*del)(void *));
+int					ft_printf(const char *format, ...);
+int					print_unsigned(unsigned int num);
+int					print_pointer(unsigned long l);
+int					printdigit_upper(unsigned long n, int base);
+int					printdigit(long n, int base);
 
 #endif

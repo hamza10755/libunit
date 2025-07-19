@@ -6,13 +6,13 @@
 /*   By: hbelaih <hbelaih@student.42.amman>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/19 15:48:47 by hbelaih           #+#    #+#             */
-/*   Updated: 2025/07/19 17:06:36 by hbelaih          ###   ########.fr       */
+/*   Updated: 2025/07/19 17:19:57 by hbelaih          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "tests.h"
+#include "tests.h"
 
-int main(void)
+int	main(void)
 {
-    launcher_lib(ft_split);
+	launcher_lib(ft_split);
 }

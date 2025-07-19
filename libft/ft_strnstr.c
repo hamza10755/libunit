@@ -9,11 +9,11 @@
 /*   Updated: 2024/09/01 14:45:35 by hbelaih          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include	"libft.h"
+#include "libft.h"
 
 static int	check(size_t p, const char *little, size_t len)
-{	
-	int		le;
+{
+	int	le;
 
 	le = ft_strlen(little);
 	if (p > (len - le))
