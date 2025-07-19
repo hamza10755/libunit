@@ -1,29 +1,27 @@
-CC = cc
-CFLAGS = -Wall -Wextra -Werror
-FRAMEWORK_DIR = framework
-LIBFT_DIR = libft
-TESTS_DIR = tests
-NAME = libunit_test_suite
+NAME = final_libunit
 
-all: $(NAME)
-
-$(NAME):
-	@make -C $(FRAMEWORK_DIR)
-	@make -C $(LIBFT_DIR)
-	@make -C $(TESTS_DIR)
-
-test:
-	@cd $(TESTS_DIR) && make test
-
+$(NAME): all
+all: libft framework real_tests tests
 clean:
-	@make clean -C $(FRAMEWORK_DIR)
-	@make clean -C $(LIBFT_DIR)
-	@make clean -C $(TESTS_DIR)
-
+	$(MAKE) -C real_tests clean
+	$(MAKE) -C tests clean
+	$(MAKE) -C framework clean
+	$(MAKE) -C libft clean
+real_tests: real_tests/Makefile
+	$(MAKE) -C real_tests
+tests: tests/Makefile
+	$(MAKE) -C tests
+framework: framework/Makefile
+	$(MAKE) -C framework
+libft: libft/Makefile
+	$(MAKE) -C libft
 fclean: clean
-	@make fclean -C $(FRAMEWORK_DIR)
-	@make fclean -C $(LIBFT_DIR)
-	@make fclean -C $(TESTS_DIR)
-
+	$(MAKE) -C real_tests fclean
+	$(MAKE) -C tests fclean
+	$(MAKE) -C framework fclean
+	$(MAKE) -C libft fclean
 re: fclean all
-.PHONY: all test clean fclean re
+test: all
+	$(MAKE) -C real_tests test
+	$(MAKE) -C tests test
+.PHONY: all clean fclean re real_tests tests framework libft test

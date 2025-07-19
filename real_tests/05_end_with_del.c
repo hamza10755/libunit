@@ -1,25 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   08_empty_string.c                                  :+:      :+:    :+:   */
+/*   05_end_with_del.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hbelaih <hbelaih@student.42.amman>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/19 12:21:26 by hbelaih           #+#    #+#             */
-/*   Updated: 2025/07/19 12:38:14 by hbelaih          ###   ########.fr       */
+/*   Created: 2025/07/19 12:21:18 by hbelaih           #+#    #+#             */
+/*   Updated: 2025/07/19 15:47:20 by hbelaih          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "splitTest.h"
+#include "real_test.h"
 
-int	empty_string_test(char **(*f)(const char *, char))
+int	end_with_del_test(char **(*f)(const char *, char))
 {
 	char	**result;
 
-	result = f("", ' ');
+	result = f("Hello,    ", ' ');
 	if (!result)
 		return (1);
-	if (result[0] != 0x0)
+	if (!result[0] || ft_strncmp(result[0], "Hello,", 6) != 0)
+		return (1);
+	if (result[1] != 0x0)
 		return (1);
 	free_split(result);
 	return (0);

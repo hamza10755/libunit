@@ -6,11 +6,11 @@
 /*   By: hbelaih <hbelaih@student.42.amman>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/19 12:21:00 by hbelaih           #+#    #+#             */
-/*   Updated: 2025/07/19 12:38:32 by hbelaih          ###   ########.fr       */
+/*   Updated: 2025/07/19 15:46:58 by hbelaih          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "splitTest.h"
+#include "real_test.h"
 
 static void	launcher_split_helper(t_unit_test **test_list)
 {

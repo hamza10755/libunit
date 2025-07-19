@@ -6,11 +6,11 @@
 /*   By: hbelaih <hbelaih@student.42.amman>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/19 12:21:43 by hbelaih           #+#    #+#             */
-/*   Updated: 2025/07/19 12:37:57 by hbelaih          ###   ########.fr       */
+/*   Updated: 2025/07/19 15:47:53 by hbelaih          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "splitTest.h"
+#include "real_test.h"
 
 static int	check_split_result(char **result)
 {

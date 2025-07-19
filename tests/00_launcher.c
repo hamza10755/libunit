@@ -6,11 +6,11 @@
 /*   By: hbelaih <hbelaih@student.42.amman>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/19 12:50:48 by hbelaih           #+#    #+#             */
-/*   Updated: 2025/07/19 12:51:54 by hbelaih          ###   ########.fr       */
+/*   Updated: 2025/07/19 16:57:21 by hbelaih          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "lib_tests.h"
+#include "tests.h"
 
 int	launcher_lib(char **(*f)(const char *, char))
 {
