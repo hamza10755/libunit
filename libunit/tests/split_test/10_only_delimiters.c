@@ -1,3 +1,5 @@
+#include "split_test.h"
+
 int only_delimiters_test(char **(*f)(const char *, char))
 {
     char **result = f("     ", ' ');

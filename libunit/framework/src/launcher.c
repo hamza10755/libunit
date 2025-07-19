@@ -1,5 +1,13 @@
 #include "../include/libunit.h"
 
+int ft_strlen(const char *str)
+{
+    int len = 0;
+    while (str[len])
+        len++;
+    return len;
+}
+
 void main_launcher(t_unit_test *list, char **(*f)(const char *, char))
 {
     pid_t pid;
@@ -11,7 +19,10 @@ void main_launcher(t_unit_test *list, char **(*f)(const char *, char))
             exit(list->f(f));
         else {
             wait(&status);
-            // write thr test fun : teat name : status 
+            write(1, list->test_name, ft_strlen(list->test_name));
+            write(1, " : ", 3);
+            write(1, list->test_fun, ft_strlen(list->test_fun));
+            write(1, " : ", 3);
             if (WIFSIGNALED(status)) {
                 signal_num = WTERMSIG(status);
                 if (signal_num == SIGSEGV)

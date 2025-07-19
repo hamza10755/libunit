@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hamzabillah <hamzabillah@student.42.fr>    +#+  +:+       +#+        */
+/*   By: yaman-alrifai <yaman-alrifai@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/26 15:06:41 by hbelaih           #+#    #+#             */
-/*   Updated: 2025/01/15 22:15:28 by hamzabillah      ###   ########.fr       */
+/*   Updated: 2025/07/19 10:16:23 by yaman-alrif      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,6 +57,7 @@ char				*ft_strtrim(const char *s1, const char *set);
 char				*ft_itoa(int n);
 char				*ft_strmapi(const char *s, char (*f)(unsigned int, char));
 char				**ft_split(char const *s, char c);
+void				free_split(char **split);
 void				ft_striteri(char *s, void (*f)(unsigned int, char *));
 
 typedef struct s_list

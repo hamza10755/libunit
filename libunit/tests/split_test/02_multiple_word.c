@@ -1,19 +1,21 @@
+#include "split_test.h"
+
 int multiple_word_test(char **(*f)(const char *, char))
 {
     char **result = f("Hello, World! This is a test.", ' ');
     if (!result)
         return (1);
-    if (ft_strcmp(result[0], "Hello,") != 0)
+    if (!result[0] || ft_strncmp(result[0], "Hello,", 6) != 0)
         return (1);
-    if (ft_strcmp(result[1], "World!") != 0)
+    if (!result[1] || ft_strncmp(result[1], "World!", 7) != 0)
         return (1);
-    if (ft_strcmp(result[2], "This") != 0)
+    if (!result[2] || ft_strncmp(result[2], "This", 5) != 0)
         return (1);
-    if (ft_strcmp(result[3], "is") != 0)
+    if (!result[3] || ft_strncmp(result[3], "is", 3) != 0)
         return (1);
-    if (ft_strcmp(result[4], "a") != 0)
+    if (!result[4] || ft_strncmp(result[4], "a", 2) != 0)
         return (1);
-    if (ft_strcmp(result[5], "test.") != 0)
+    if (!result[5] || ft_strncmp(result[5], "test.", 6) != 0)
         return (1);
     if (result[6] != 0x0)
         return (1);

@@ -1,7 +1,7 @@
 #ifndef SPLIT_TESTS_H
 #define SPLIT_TESTS_H
-#include "../framework/include/libunit.h"
-#include "../libft/libft.h"
+#include "../../framework/include/libunit.h"
+#include "../../libft/libft.h"
 
 
 int basic_split_test(char **(*f)(const char *, char));

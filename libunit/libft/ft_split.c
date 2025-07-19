@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abdullah <abdullah@student.42.fr>          +#+  +:+       +#+        */
+/*   By: yaman-alrifai <yaman-alrifai@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 10:07:46 by hbelaih           #+#    #+#             */
-/*   Updated: 2025/06/16 18:18:37 by abdullah         ###   ########.fr       */
+/*   Updated: 2025/07/19 10:16:04 by yaman-alrif      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,4 +68,19 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	ft_allocate(new, s, c);
 	return (new);
+}
+
+void free_split(char **split)
+{
+	char **tmp;
+
+	if (!split)
+		return;
+	tmp = split;
+	while (*tmp)
+	{
+		free(*tmp);
+		++tmp;
+	}
+	free(split);
 }
